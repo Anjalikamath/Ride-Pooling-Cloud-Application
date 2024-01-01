@@ -1,0 +1,34 @@
+version: '3'
+services:
+        # flaskappr:
+        #   restart: always
+        #   build: ../try2r/
+
+        users:
+            restart: always
+            image: users:latest
+            build: .
+            volumes:
+              - .:/opt/services/flaskapp/src
+            networks:
+              - web_nw
+            entrypoint: ["python", "app.py","runserver"]
+            environment:
+                    - TEAM_NAME=CC_0749_1674 
+       
+       
+
+        nginx:
+            restart: always
+            image: "nginx:1.13.5"
+            ports:
+              - "8080:80"
+            volumes:
+              - ./conf.d:/etc/nginx/conf.d
+            networks:
+              - web_nw
+            depends_on:
+              - users
+networks:
+   web_nw:
+    driver: bridge
