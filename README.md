@@ -18,13 +18,13 @@ Developed the backend for a cloud based ​RideShare​ application​, ​that 
 
 
 * Phase2:
-  * The monolithic REST service created in Phase 1 is split up into two microservices​ - one catering to the user management, and another catering to the ride management.
-  * These two microservices are started in separate docker containers, running on one AWS instance.
-  * The microservices talk to each other via their respective REST interfaces.
+  * The monolithic REST service created in Phase 1 was split up into two microservices​ - one catering to the user management, and another catering to the ride management.
+  * These two microservices were started in separate docker containers, running on one AWS instance.
+  * The microservices talked to each other via their respective REST interfaces.
 
 
 * Phase3:
-  * The two microservices (containers) are put into two different AWS EC2 instances.
+  * The two microservices (containers) was put into two different AWS EC2 instances.
   * Made them accessible from under the same public IP address and also the same port (80).
   * Used a load balancer supporting path-based routing (AWS Application Load Balancer) to distribute incoming HTTP requests to one of the two EC2 instances based on the URL route of the request.
 
