@@ -1,7 +1,7 @@
 # Ride Pooling Cloud Application - RideShare
 
 
-Developed the backend for a cloud based ​RideShare​ application​, ​that can be used to pool rides. The ​RideShare ​application allows the users to create a new ride if they are travelling from point A to point B. The application should be able to: 
+Developed the backend for a cloud based ​RideShare​ application​, ​that can be used to pool rides. The ​RideShare ​application allows the users to create a new ride if they are travelling from point A to point B. The application can: 
 * Add a new user
 * Delete an existing user
 * Create a new Ride
